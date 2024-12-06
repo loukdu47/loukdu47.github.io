@@ -6,64 +6,96 @@
   <title>Memory Game</title>
 
   <link rel="stylesheet" href="styles.css">
+  <script defer src="scripts.js"></script>
 </head>
 <body>
-  <section class="memory-game">
+  <dialog id="main-dialog" open>
+    <form method="dialog">
+    <div id="dialog-box" class="dialog">
+      
+      <h1 class="centerpls">Projet personnel</h1>
+      <div id="ligneseparation"></div>
+      <p class="centerpls" ><em>Design web gr.2 - Automne 2024</em></p>
+      <p><strong>Réalisé par</strong><br>Louka Ménard</p>
+      <p><strong>Inspiration</strong><br>
+        <a href="https://github.com/code-sketch/memory-game" target="_blank">https://github.com/code-sketch/memory-game</a>
+      </p>
+      <img src="./img/megaman.png" alt="Personnage" class="dialog-image">
+      <button id="close-btn" >Fermer la fenêtre</button>
+      <button class="footer centerpls" id="plsClose" >Ne plus afficher cette fenêtre</button>
+    
+    </div>
+  </form>
+    </dialog>
+    
+ <div id="memory-game" class="memory-game hidden">
+  
+  <span id="Score"  style=" transform: translate(250px); font-size: 2em;">000000</span>
+  <audio id="TYFYL" src="./audio/thankYouForYourLoveSong.mp3"> </audio>
+  <section class="memory-game hidden" id="theGame">
+    
+    
     <div class="memory-card" data-framework="aurelia">
-      <img class="front-face" src="../img/aurelia.svg" alt="Aurelia" />
-      <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
+      <img class="front-face" src="./img/136bf1ea7adf76d5579977c1b94fe032.jpg" alt="Aurelia">
+      <img class="back-face" src="./img/OIF.jpg" alt="JS Badge">
     </div>
     <div class="memory-card" data-framework="aurelia">
-      <img class="front-face" src="../img/aurelia.svg" alt="Aurelia" />
-      <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
+      <img class="front-face" src="./img/136bf1ea7adf76d5579977c1b94fe032.jpg" alt="Aurelia">
+      <img class="back-face" src="./img/OIF.jpg" alt="JS Badge">
     </div>
 
     <div class="memory-card" data-framework="vue">
-      <img class="front-face" src="../img/vue.svg" alt="Vue" />
-      <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
+      <img class="front-face" src="./img/adventure_back_view_countryside_dawn_dramatic_dusk_environment_forest-1561777.jpg" alt="Vue">
+      <img class="back-face" src="./img/OIF.jpg" alt="JS Badge">
     </div>
     <div class="memory-card" data-framework="vue">
-      <img class="front-face" src="../img/vue.svg" alt="Vue" />
-      <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
+      <img class="front-face" src="./img/adventure_back_view_countryside_dawn_dramatic_dusk_environment_forest-1561777.jpg" alt="Vue">
+      <img class="back-face" src="./img/OIF.jpg" alt="JS Badge">
     </div>
 
     <div class="memory-card" data-framework="angular">
-      <img class="front-face" src="../img/angular.svg" alt="Angular" />
-      <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
+      <img class="front-face" src="./img/R.jpg" alt="Angular">
+      <img class="back-face" src="./img/OIF.jpg" alt="JS Badge">
     </div>
     <div class="memory-card" data-framework="angular">
-      <img class="front-face" src="../img/angular.svg" alt="Angular" />
-      <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
+      <img class="front-face" src="./img/R.jpg" alt="Angular">
+      <img class="back-face" src="./img/OIF.jpg" alt="JS Badge">
     </div>
 
     <div class="memory-card" data-framework="ember">
-      <img class="front-face" src="../img/ember.svg" alt="Ember" />
-      <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
+      <img class="front-face" src="./img/0DOPsY.webp" alt="Ember">
+      <img class="back-face" src="./img/OIF.jpg" alt="JS Badge">
     </div>
     <div class="memory-card" data-framework="ember">
-      <img class="front-face" src="../img/ember.svg" alt="Ember" />
-      <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
+      <img class="front-face" src="./img/0DOPsY.webp" alt="Ember">
+      <img class="back-face" src="./img/OIF.jpg" alt="JS Badge">
     </div>
 
     <div class="memory-card" data-framework="backbone">
-      <img class="front-face" src="../img/backbone.svg" alt="Backbone" />
-      <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
+      <img class="front-face" src="./img/télécharger.jpg" alt="Backbone">
+      <img class="back-face" src="./img/OIF.jpg" alt="JS Badge">
     </div>
     <div class="memory-card" data-framework="backbone">
-      <img class="front-face" src="../img/backbone.svg" alt="Backbone" />
-      <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
+      <img class="front-face" src="./img/télécharger.jpg" alt="Backbone">
+      <img class="back-face" src="./img/OIF.jpg" alt="JS Badge">
     </div>
 
     <div class="memory-card" data-framework="react">
-      <img class="front-face" src="../img/react.svg" alt="React" />
-      <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
+      <img class="front-face" src="./img/chillblob.webp" alt="React">
+      <img class="back-face" src="./img/OIF.jpg" alt="JS Badge">
     </div>
     <div class="memory-card" data-framework="react">
-      <img class="front-face" src="../img/react.svg" alt="React" />
-      <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
+      <img class="front-face" src="./img/chillblob.webp" alt="React">
+      <img class="back-face" src="./img/OIF.jpg" alt="JS Badge">
     </div>
   </section>
-
-  <script src="scripts.js"></script>
+</div>
+  
+<div id="end-screen" class="hidden">
+  <p>Partie Terminée !</p>
+  <p id="message"></p>
+  <p >Score final: <span id="final-score">000000</span></p>
+  <button id="bouton">Rejouer</button>
+</div>
 </body>
 </html>

@@ -184,12 +184,12 @@ const dialog = document.getElementById('main-dialog');
 const affichePlus = document.getElementById("plsClose")
 
 
-closeBtn.addEventListener('click', affichejeu);
+closeBtn.addEventListener('click', afficheJeu);
 plsClose.addEventListener('click', fermePourToujours);
 /**
  * la fonction affiche jeu enleve la classe hidden des conteneurs du jeu, il mets l'image dans le background et il fais jouer Thank you for your love.
  */
-function affichejeu() {
+function afficheJeu() {
   
  
   game.classList.remove("hidden");
@@ -204,19 +204,19 @@ function affichejeu() {
 }
 //localStorage.removeItem('affichePas');
 /**
- * fais la meme chose que affichejeu, mais donne une valeur au local storage 
+ * fais la meme chose que afficheJeu, mais donne une valeur au local storage 
  */
 function fermePourToujours() {
   localStorage.setItem('affichePas', true);
-  affichejeu();
+  afficheJeu();
 }
 /* ici on decide si le fenetre de dialog est ouverte ou non*/
 if(localStorage.getItem('affichePas') === 'true' ) {
 dialog.close();
-affichejeu();
+afficheJeu();
 }
 if(localStorage.getItem('affichePas') === null){
   
   dialog.showmodal();
-  affichejeu();
+  afficheJeu();
 }
